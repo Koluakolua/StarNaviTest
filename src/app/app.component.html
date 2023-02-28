@@ -4,7 +4,10 @@
     <mat-option *ngFor="let mode of gameModes$ | async" [value]="mode">{{ mode.name }}</mat-option>
   </mat-select>
 </mat-form-field>
-<button (click)="onStartClick()" mat-flat-button class="start-button">START</button>
+<button (click)="onStartClick()"
+        [disabled]="selectedGameMode === null"
+        mat-flat-button
+        class="start-button">START</button>
 
 <div class="game">
   <app-game></app-game>
