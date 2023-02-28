@@ -2,3 +2,12 @@
   display: flex;
   flex-direction: row;
 }
+
+.game * {
+  flex-shrink: 0;
+}
+
+.start-button {
+  margin-left: 10px;
+  background-color: cornflowerblue;
+}

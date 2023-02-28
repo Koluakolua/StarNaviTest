@@ -1,10 +1,10 @@
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
   <mat-label>Pick Mode</mat-label>
   <mat-select [(value)]="selectedGameMode">
     <mat-option *ngFor="let mode of gameModes$ | async" [value]="mode">{{ mode.name }}</mat-option>
   </mat-select>
 </mat-form-field>
-<button (click)="onStartClick()" mat-raised-button color="primary">START</button>
+<button (click)="onStartClick()" mat-flat-button class="start-button">START</button>
 
 <div class="game">
   <app-game></app-game>
