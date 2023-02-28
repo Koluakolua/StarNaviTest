@@ -1,0 +1,6 @@
+<mat-card class="card">
+  <h1>Hover Squares</h1>
+  <div *ngFor="let hoveredSquare of lastHoveredSquares$ | async">
+    <mat-card class="hovered-square">row: {{ hoveredSquare.row }} col: {{ hoveredSquare.col }}</mat-card>
+  </div>
+</mat-card>

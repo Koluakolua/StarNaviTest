@@ -1,0 +1,11 @@
+<table>
+  <tbody>
+  <tr class="row" *ngFor="let row of fields; let i = index">
+    <td *ngFor="let column of row; let j = index; trackBy: trackBy"
+        (mouseenter)="onMouseEnter({row: i, col: j})"
+        [class.selected]="column"
+        class="field">
+    </td>
+  </tr>
+  </tbody>
+</table>
